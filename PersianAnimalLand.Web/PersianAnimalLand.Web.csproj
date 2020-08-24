@@ -4,4 +4,28 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\netcoreapp3.1\PersianAnimalLand.Web.AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\PersianAnimalLand.Web.csproj.nuget.dgspec.json" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\Debug\netcoreapp3.1\PersianAnimalLand.Web.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\netcoreapp3.1\PersianAnimalLand.Web.assets.cache" />
+    <None Include="obj\Debug\netcoreapp3.1\PersianAnimalLand.Web.csprojAssemblyReference.cache" />
+    <None Include="obj\PersianAnimalLand.Web.csproj.nuget.g.props" />
+    <None Include="obj\PersianAnimalLand.Web.csproj.nuget.g.targets" />
+    <None Include="obj\project.nuget.cache" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\netcoreapp3.1\" />
+    <Folder Include="clientapp\" />
+  </ItemGroup>
+
 </Project>
