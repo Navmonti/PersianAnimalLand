@@ -5,10 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Enum\" />
-    <Folder Include="Entity\" />
-    <Folder Include="Dto\" />
-    <Folder Include="Resources\" />
+    <Folder Include="Utility\" />
+    <Folder Include="ViewModel\" />
+    <Folder Include="Repository\" />
   </ItemGroup>
 
 </Project>
