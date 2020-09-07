@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 
 namespace PersianAnimalLand.Api
@@ -21,6 +22,7 @@ namespace PersianAnimalLand.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped(_config);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
