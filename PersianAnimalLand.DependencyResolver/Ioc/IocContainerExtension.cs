@@ -10,13 +10,14 @@ namespace PersianAnimalLand.DependencyResolver.Ioc
             return serviceCollection;
         }
 
-        public static IServiceCollection AddTransient()
+        public static IServiceCollection AddScope(this IServiceCollection serviceCollection, IConfiguration _configuration)
         {
-
+            return serviceCollection;
         }
-        public static IServiceCollection AddSingleton()
-        {
 
+        public static IServiceCollection AddSingleton(this IServiceCollection serviceCollection, IConfiguration _configuration)
+        {
+            return serviceCollection;
         }
     }
 }
