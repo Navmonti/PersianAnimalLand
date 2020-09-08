@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using PersianAnimalLand.DependencyResolver.Ioc;
 
 namespace PersianAnimalLand.Api
 {
@@ -21,8 +22,12 @@ namespace PersianAnimalLand.Api
         }
 
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddScoped(_config);
+        { 
+            services.AddScope(_config);
+            services.AddTransient(_config);
+            services.AddSingleton(_config);
+
+            services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
