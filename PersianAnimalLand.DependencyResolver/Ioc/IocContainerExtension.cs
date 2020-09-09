@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PersianAnimalLand.Core.Repository;
+using PersianAnimalLand.DataAccess.Context;
+using PersianAnimalLand.DataAccess.Repository;
 using PersianAnimalLand.Services.Implements;
 using PersianAnimalLand.Services.Interfaces;
 
@@ -15,7 +18,18 @@ namespace PersianAnimalLand.DependencyResolver.Ioc
 
         public static IServiceCollection AddScope(this IServiceCollection serviceCollection, IConfiguration _configuration)
         {
+            #region Context
+            serviceCollection.AddContext<PersianAnimalLandContext>(_configuration.GetConnectionString("PersianAnimalLandContext"));
+            #endregion
+
+            #region Services
             serviceCollection.AddScoped<IUserService, UserService>();
+            #endregion
+
+            #region Repos
+            serviceCollection.AddScoped(typeof(IGenericRepo<>), typeof(GenericRepo<>));
+            #endregion
+
             return serviceCollection;
         }
 
@@ -27,13 +41,7 @@ namespace PersianAnimalLand.DependencyResolver.Ioc
         {
             serviceCollection.AddDbContext<TDbContext>(optionBuilder =>
             {
-                optionBuilder.UseSqlServer(conectionString,
-                            sqlServerOption =>
-                            {
-                                sqlServerOption.MaxBatchSize(1000);
-                                sqlServerOption.CommandTimeout(null);
-                                sqlServerOption.UseRelationalNulls(false);
-                            });
+                optionBuilder.UseSqlServer(conectionString);
             });
 
             return serviceCollection;

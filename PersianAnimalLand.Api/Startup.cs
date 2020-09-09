@@ -22,10 +22,12 @@ namespace PersianAnimalLand.Api
         }
 
         public void ConfigureServices(IServiceCollection services)
-        {
+        { 
             services.AddScope(_config);
             services.AddTransient(_config);
             services.AddSingleton(_config);
+
+            services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
