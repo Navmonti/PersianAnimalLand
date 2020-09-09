@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PersianAnimalLand.Core.Repository
 {
-    class GenericRepo
+    public class GenericRepo
     {
     }
 }

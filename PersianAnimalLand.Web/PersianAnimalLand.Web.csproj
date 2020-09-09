@@ -33501,6 +33501,7 @@
   <ItemGroup>
     <Folder Include="bin\Debug\netcoreapp3.1\" />
     <Folder Include="clientapp\node_modules\jest-environment-jsdom\build\__mocks__\" />
+    <Folder Include="clientapp\public\asset\" />
   </ItemGroup>
 
   <ItemGroup>
