@@ -3,8 +3,8 @@ import Logo from '../shared/logo'
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-    return (
-        <header className="App-header">
+    return ( 
+        <div className="box-container">
             <nav className="navbar navbar-expand-lg header-menu">
                 <Logo />
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,8 @@ const Header = () => {
                     <Link className="nav-link" to="/login">Login</Link>
                 </div>
             </nav>
-        </header>
+        </div>
+             
     )
 }
 

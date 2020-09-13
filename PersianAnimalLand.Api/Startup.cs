@@ -28,6 +28,12 @@ namespace PersianAnimalLand.Api
             services.AddSingleton(_config);
 
             services.AddControllers();
+
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
+            services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -36,7 +42,7 @@ namespace PersianAnimalLand.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors(options => options.WithOrigins("http://localhost:3000"));
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PersianAnimalLand.DependencyResolver\PersianAnimalLand.DependencyResolver.csproj" />
+    <ProjectReference Include="..\PersianAnimalLand.Domain\PersianAnimalLand.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,15 +1,27 @@
 ﻿body {
-
-
-
 }
 
 
 
 /*Common CSS*/
+.box-container {
+    width: 100%
+}
+
+.page {
+    height :500px;
+}
+
+.login { 
+    border: 3px solid #d0dfa6;
+    width: 400px;
+    background-color: #f1f1f1;
+    margin: auto;
+    border-radius: 20px;
+}
 
 .Logo {
-    width : 200px;
+    width: 200px;
 }
 
 .header-menu {
@@ -23,18 +35,19 @@
 .header-menu {
 }
 
-.footer-container {
-    position: fixed;
+.footer {
     background-color: #66783a;
-    right: 0;
-    bottom: 0;
-    left: 0;
 }
 
-
+.btn-general {
+    color: white !important;
+    background-color: #66783a !important;
+    width: 150px;
+}
+.btn-general:hover {
+}
 
 @media (max-width :768px ) {
-
     .mt-xs {
         margin-top: 2px;
     }
