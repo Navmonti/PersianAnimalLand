@@ -8,16 +8,11 @@ const Login = () => {
 
     const _onClick = () => { 
         const dataSet = {
-            Username: Username,
-            Password: Password
+            Username: 'Navid',
+            Password: 'Montazeripour'
         }
-        axios.post('https://localhost:44300/api/User/Login', dataSet )
+        axios.get('https://localhost:44356/api/User/Get');
     }
-
-    
-
-
-
 
     return (
         <div className="container pb-xlg pt-xlg page">

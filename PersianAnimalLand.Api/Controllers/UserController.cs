@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PersianAnimalLand.Domain.Dto;
 using PersianAnimalLand.Domain.Entity;
 using PersianAnimalLand.Services.Interfaces;
 
@@ -19,15 +20,21 @@ namespace PersianAnimalLand.Api.Controllers
         {
             _userService = userService;
         }
+
         [HttpPost]
-        public IActionResult Login(User user)
+        public ActionResult Login()
         {
-            var response = _userService.UserLogin();
             return Ok(null);
         }
 
         [HttpPost]
-        public IActionResult LogOut()
+        public ActionResult LogOut()
+        {
+            return Ok(null);
+        }
+
+        [HttpGet]
+        public ActionResult Get()
         {
             return Ok(null);
         }

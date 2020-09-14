@@ -1,9 +1,6 @@
 ﻿using PersianAnimalLand.Core.ViewModel;
 using PersianAnimalLand.Domain.Entity;
-using PersianAnimalLand.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using PersianAnimalLand.Services.Interfaces; 
 
 namespace PersianAnimalLand.Services.Implements
 {

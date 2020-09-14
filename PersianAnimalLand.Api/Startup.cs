@@ -15,7 +15,6 @@ namespace PersianAnimalLand.Api
 {
     public class Startup
     {
-        private readonly string AllowedOrigins = "_Origins";
         private IConfiguration _config { get; }
         public Startup(IConfiguration configuration)
         {
@@ -23,24 +22,16 @@ namespace PersianAnimalLand.Api
         }
 
         public void ConfigureServices(IServiceCollection services)
-        {
+        { 
             services.AddScope(_config);
             services.AddTransient(_config);
-            services.AddSingleton(_config);
-            services.AddCors(options =>
+            services.AddSingleton(_config); 
+
+            services.AddCors(c =>
             {
-                options.AddPolicy(AllowedOrigins, builder =>
-                {
-                    builder
-                        .WithOrigins("http://localhost:3000")
-                        .SetIsOriginAllowedToAllowWildcardSubdomains()
-                        .AllowAnyHeader()
-                        .AllowAnyMethod()
-                        .AllowCredentials();
-                });
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
             });
-            services.AddControllers(); 
-            services.AddMvc();
+            
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -49,16 +40,15 @@ namespace PersianAnimalLand.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors();
+            app.UseCors(options => options.WithOrigins("http://localhost:3000"));
             app.UseRouting();
-            app.UseCors(AllowedOrigins);
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
                 {
                     await context.Response.WriteAsync("Hello World!");
                 });
-            });
+            }); 
         }
     }
 }
