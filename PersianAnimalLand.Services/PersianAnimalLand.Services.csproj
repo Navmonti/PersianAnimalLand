@@ -8,4 +8,9 @@
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PersianAnimalLand.Core\PersianAnimalLand.Core.csproj" />
+    <ProjectReference Include="..\PersianAnimalLand.Domain\PersianAnimalLand.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
