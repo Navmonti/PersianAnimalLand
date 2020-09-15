@@ -33507,7 +33507,6 @@
     <Folder Include="clientapp\node_modules\jest-environment-jsdom\build\__mocks__\" />
     <Folder Include="clientapp\public\asset\" />
     <Folder Include="clientapp\src\molecules\" />
-    <Folder Include="clientapp\src\templates\" />
     <Folder Include="clientapp\src\organisms\" />
   </ItemGroup>
 

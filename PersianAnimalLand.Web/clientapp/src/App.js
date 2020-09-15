@@ -1,24 +1,18 @@
-import React from 'react';
-import Header from './shared/header';
-import Footer from './shared/footer';
+import React from 'react'; 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AboutUs from './pages/aboutus';
-import ContactUs from './pages/contactus';
-import Home from './pages/home';
-import Login from './pages/login';
+import MainTemplate from './templates/MainTemplate';
+import PanelTemplate from './templates/PanelTemplate';
+import LoginTemplate from './templates/LoginTemplate';
+
 
 function App() {
     return (
-        <Router>
-            <Header />
+        <Router> 
             <Switch>
-                <Route exact path='/' component={Home} />
-                <Route path='/home' component={Home} />
-                <Route path='/contactus' component={ContactUs} />
-                <Route path='/aboutus' component={AboutUs} />
-                <Route path='/login' component={Login} />
-            </Switch>
-            <Footer />
+                <Route exact path='/' component={MainTemplate} />
+                <Route exact path='/Panel' component={PanelTemplate} />
+                <Route exact path='/Login' component={LoginTemplate} />
+            </Switch> 
         </Router>
     );
 }

@@ -6,32 +6,30 @@ using System.Text;
 
 namespace PersianAnimalLand.Domain.Entity
 {
-    [Table("User")]
-    public class User
+    [Table("Clinic")]
+    public class Clinic
     {
         [Key]
         public int ID { get; set; }
 
         [Required]
         [MaxLength(100)]
-        public string Firstname { get; set; }
-
-
-        [Required]
-        [MaxLength(100)]
-        public string LastName { get; set; }
+        public string Title { get; set; }
 
         [Required]
-        [MaxLength(100)]
-        public string Username { get; set; }
+        [MaxLength(500)]
+        public string Address { get; set; }
 
         [Required]
-        [MaxLength(100)]
-        public string Password { get; set; }
+        [MaxLength(20)]
+        public string Latitude { get; set; }
 
         [Required]
-        [MaxLength(100)]
-        public string Email { get; set; }
+        [MaxLength(30)]
+        public string Longitude { get; set; }
 
+        [Required]
+        [MaxLength(30)]
+        public string Phone { get; set; } 
     }
 }
