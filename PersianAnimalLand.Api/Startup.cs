@@ -31,7 +31,8 @@ namespace PersianAnimalLand.Api
             {
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
             });
-            
+            services.AddMvc();
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -40,15 +41,15 @@ namespace PersianAnimalLand.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors(options => options.WithOrigins("http://localhost:3000"));
+          
             app.UseRouting();
+            app.UseCors(options => options.WithOrigins("http://localhost:3000"));
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            }); 
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
