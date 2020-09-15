@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PersianAnimalLand.Core\PersianAnimalLand.Core.csproj" />
+    <ProjectReference Include="..\PersianAnimalLand.Domain\PersianAnimalLand.Domain.csproj" />
   </ItemGroup>
 
 </Project>
