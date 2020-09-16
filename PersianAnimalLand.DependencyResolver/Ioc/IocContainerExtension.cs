@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PersianAnimalLand.Core.EF.Repository;
 using PersianAnimalLand.Core.Repository;
-using PersianAnimalLand.DataAccess.Context;
-using PersianAnimalLand.DataAccess.Repository;
+using PersianAnimalLand.DataAccess.Context; 
 using PersianAnimalLand.Services.Implements;
 using PersianAnimalLand.Services.Interfaces;
 

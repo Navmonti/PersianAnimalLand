@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace PersianAnimalLand.Core.Repository
 {
-    public interface IGenericRepo<T> 
+    public interface IGenericRepo<T>
     {
-        void Save(T model);
+        T Get(int id);
+        IEnumerable<T> GetAll();
 
-        void Updare(T model);
+        void Insert(T entity);
+        void InsertRange(IEnumerable<T> entities);
 
-       void Delete(T model);
-
-       void SaveRange(List<T> models);
-
-       void UpdareRange(List<T> models);
-
-       void DeleteRange(T model);
+        void Delete(T entity);
+        void DeleteRAnge(IEnumerable<T> entities);
     }
 }

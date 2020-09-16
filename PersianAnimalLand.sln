@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersianAnimalLand.Dependenc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1FAFB946-5CE6-45EB-8289-43335F7AFA0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersianAnimalLand.Core", "PersianAnimalLand.Core\PersianAnimalLand.Core.csproj", "{5564100D-CDEA-4244-81AD-3CA3CCB660BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersianAnimalLand.Core", "PersianAnimalLand.Core\PersianAnimalLand.Core.csproj", "{5564100D-CDEA-4244-81AD-3CA3CCB660BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersianAnimalLand.Core.EF", "PersianAnimalLand.Core.EF\PersianAnimalLand.Core.EF.csproj", "{CBC68B1A-24AD-423E-BAE2-BCD3EF15CEF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{5564100D-CDEA-4244-81AD-3CA3CCB660BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5564100D-CDEA-4244-81AD-3CA3CCB660BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5564100D-CDEA-4244-81AD-3CA3CCB660BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBC68B1A-24AD-423E-BAE2-BCD3EF15CEF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBC68B1A-24AD-423E-BAE2-BCD3EF15CEF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBC68B1A-24AD-423E-BAE2-BCD3EF15CEF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBC68B1A-24AD-423E-BAE2-BCD3EF15CEF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{02631C6D-33E6-4FCB-98D4-C3F51D88256D} = {508DC872-21E2-4B31-8367-0C26099BA4A9}
 		{302EC8A5-D715-4B52-B358-230B4ABBA04C} = {476008C0-075A-412F-B6BF-A14B5C9C189A}
 		{5564100D-CDEA-4244-81AD-3CA3CCB660BF} = {1FAFB946-5CE6-45EB-8289-43335F7AFA0E}
+		{CBC68B1A-24AD-423E-BAE2-BCD3EF15CEF4} = {1FAFB946-5CE6-45EB-8289-43335F7AFA0E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E031C6BB-74BB-4402-9C23-B93413427B0E}

@@ -1,35 +1,15 @@
-﻿using PersianAnimalLand.Core.Repository;
-using PersianAnimalLand.Domain.Entity;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PersianAnimalLand.Core.EF.Repository; 
+using PersianAnimalLand.DataAccess.Context;
+using PersianAnimalLand.DataAccess.IRepository;
+using PersianAnimalLand.Domain.Entity; 
 
 namespace PersianAnimalLand.DataAccess.Repository
 {
-    public class UserRepo : IGenericRepo<User>
+    public class UserRepo : GenericRepo<User>, IUserRepo 
     {
-        public void Delete(User model)
+        public UserRepo(PersianAnimalLandContext context) : base(context)
         {
-        }
 
-        public void DeleteRange(User model)
-        {
-        }
-
-        public void Save(User model)
-        {
-        }
-
-        public void SaveRange(List<User> models)
-        {
-        }
-
-        public void Updare(User model)
-        {
-        }
-
-        public void UpdareRange(List<User> models)
-        {
         }
     }
 }
