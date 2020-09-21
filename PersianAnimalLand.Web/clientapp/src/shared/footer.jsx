@@ -4,7 +4,7 @@ import catImage from '../image/dog.png';
 
 const ContactUs = () => {
     return (
-        <footer class="container-fluid text-center footer ">
+        <footer className="container-fluid text-center footer ">
             <div className="row">
                 <div className="col-md-3 text-center">
                     <img src={dogImage} width="50%" />

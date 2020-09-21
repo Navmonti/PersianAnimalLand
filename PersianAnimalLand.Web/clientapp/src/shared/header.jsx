@@ -31,6 +31,7 @@ const Header = () => {
                 </div>
                 <div className="pull-right">
                     <Link className="nav-link" to="/login">Login</Link>
+                    <Link className="nav-link" to="/panel">Panel</Link>
                 </div>
             </nav>
         </div>

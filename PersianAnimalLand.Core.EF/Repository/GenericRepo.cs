@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PersianAnimalLand.Core.Repository;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq; 
 
 namespace PersianAnimalLand.Core.EF.Repository
 {
     public class GenericRepo<T> : IGenericRepo<T> where T : class
     {
         public DbSet<T> _dbSet;
-        public GenericRepo(DbContext context) => _dbSet = context.Set<T>();
+        public GenericRepo(Microsoft.EntityFrameworkCore.DbContext context) => _dbSet = context.Set<T>();
 
         public T Get(int id) => _dbSet.Find(id);
         public IEnumerable<T> GetAll() => _dbSet.ToList();

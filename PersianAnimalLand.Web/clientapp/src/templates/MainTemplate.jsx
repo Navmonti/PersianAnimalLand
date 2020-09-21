@@ -2,11 +2,11 @@
 import Header from '../shared/header';
 import Footer from '../shared/footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AboutUs from '../pages/aboutus';
-import ContactUs from '../pages/contactus';
-import Home from '../pages/home'; 
+import AboutUs from '../pages/main/aboutus';
+import ContactUs from '../pages/main/contactus';
+import Home from '../pages/main/home'; 
 
-function MainTemplate() {
+const MainTemplate = () => {
     return (
         <Router>
             <Header />
