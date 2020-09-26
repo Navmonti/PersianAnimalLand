@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PersianAnimalLand.Domain.Entity;
+using PersianAnimalLand.Services.Interfaces;
 
 namespace PersianAnimalLand.Api.Controllers
 {
@@ -7,15 +8,17 @@ namespace PersianAnimalLand.Api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Login() {
-            return Ok(null);
-        }
-
-        [HttpPost]
-        public IActionResult Logout()
+        private readonly IUserService _userService;
+        public UserController(IUserService userService)
         {
-            return Ok(null);
+            _userService = userService;
         }
+        public IActionResult AddUser(User user)
+        {
+           // return Ok(_userService.add)
+        }
+       
+
+
     }
 }

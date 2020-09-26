@@ -11,7 +11,7 @@ const Login = () => {
             Username: 'Navid',
             Password: 'Montazeripour'
         }
-        axios.get('https://localhost:44356/api/User/Login');
+        axios.get('https://localhost:44356/api/Auth/Login');
     }
 
     return (
