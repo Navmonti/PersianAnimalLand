@@ -4,33 +4,19 @@ import catImage from '../image/dog.png';
 
 const ContactUs = () => {
     return (
-        <footer className="container-fluid text-center footer ">
-            <div className="row">
-                <div className="col-md-3 text-center">
-                    <img src={dogImage} width="50%" />
+        <div className="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
+            <div className="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+                <div className="text-dark order-2 order-md-1">
+                    <span className="text-muted font-weight-bold mr-2">2020©</span>
+                    <a href="http://keenthemes.com/metronic" target="_blank" className="text-dark-75 text-hover-primary">Keenthemes</a>
                 </div>
-                <div className="col-md-3 text-center">
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                        <li>Item 4</li>
-                    </ul>
-                </div>
-                <div className="col-md-3 text-center">
-                    <ul>
-                        <li>Item 1</li>
-                        <li>Item 2</li>
-                        <li>Item 3</li>
-                        <li>Item 4</li>
-                    </ul>
-                </div>
-                <div className="col-md-3 text-center">
-                    <img src={catImage} width="50%" />
+                <div className="nav nav-dark order-1 order-md-2">
+                    <a href="http://keenthemes.com/metronic" target="_blank" className="nav-link pr-3 pl-0">About</a>
+                    <a href="http://keenthemes.com/metronic" target="_blank" className="nav-link px-3">Team</a>
+                    <a href="http://keenthemes.com/metronic" target="_blank" className="nav-link pl-3 pr-0">Contact</a>
                 </div>
             </div>
-
-        </footer>
+        </div>
     )
 }
 

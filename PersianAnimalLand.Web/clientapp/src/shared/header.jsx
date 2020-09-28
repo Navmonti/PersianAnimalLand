@@ -3,39 +3,36 @@ import Logo from '../shared/logo'
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-    return ( 
-        <div className="box-container">
-            <nav className="navbar navbar-expand-lg header-menu">
-                <Logo />
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item header-menu-item ">
-                            <Link className="nav-link" to="/">Home</Link>
-                        </li>
-                        <li className="nav-item header-menu-item ">
-                            <Link className="nav-link" to="/aboutus">About US</Link>
-                        </li>
-                        <li className="nav-item header-menu-item ">
-                            <Link className="nav-link" to="/">Store</Link>
-                        </li>
-                        <li className="nav-item header-menu-item ">
-                            <Link className="nav-link" to="/">Clinic</Link>
-                        </li>
-                        <li className="nav-item header-menu-item ">
-                            <Link className="nav-link" to="/contactus">Contact Us</Link>
-                        </li>
-                    </ul>
+    return (
+        <div id="kt_header" class="header header-fixed header-menu">
+            <div class="container-fluid d-flex align-items-stretch justify-content-between">
+                <div class="d-flex align-items-stretch mr-3">
+                    <div class="header-logo">
+                        <a href="/metronic/demo2/index.html">
+                            <Logo/>
+                        </a>
+                    </div>
+                    <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+                        <div id="kt_header_menu" class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
+                            <ul class="menu-nav">
+                                <li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here" data-menu-toggle="click" aria-haspopup="true">
+                                    <Link className="menu-link menu-toggle" to="/">Home</Link>
+                                </li>
+                                <li class="menu-item menu-item-submenu menu-item-open-dropdown" data-menu-toggle="click" aria-haspopup="true">
+                                    <Link className="nav-link" to="/">Store</Link>
+                                </li>
+                                <li class="menu-item menu-item-submenu menu-item-open-dropdown" data-menu-toggle="click" aria-haspopup="true">
+                                    <Link className="nav-link" to="/">Clinic</Link>
+                                </li> 
+                                <li class="menu-item menu-item-submenu menu-item-open-dropdown" data-menu-toggle="click" aria-haspopup="true">
+                                    <Link className="nav-link" to="/contactus">Contact Us</Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div className="pull-right">
-                    <Link className="nav-link" to="/login">Login</Link>
-                    <Link className="nav-link" to="/panel">Panel</Link>
-                </div>
-            </nav>
+            </div>
         </div>
-             
     )
 }
 
