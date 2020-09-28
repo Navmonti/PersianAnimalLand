@@ -3,7 +3,11 @@
 
 const AboutUs = () => {
     return (
-        <h1>AboutUs</h1>
+        <div class="container">
+            <div class="row">
+                <h1>AboutUs</h1>
+            </div>
+        </div>
     )
 }
 

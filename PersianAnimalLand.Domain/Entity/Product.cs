@@ -11,15 +11,37 @@ namespace PersianAnimalLand.Domain.Entity
     {
         [Key]
         public int ID { get; set; }
-        public string Title { get; set; }
-        public string Brand { get; set; }
-        public string Price { get; set; }
-        public string IsStoke { get; set; }
-        public string Description { get; set; }
-        public string Weight { get; set; }
-        public string Country { get; set; }
-        public string Point { get; set; }
 
-        public string CountOff { get; set; }
+        [Required]
+        [MaxLength(300)]
+        public string Title { get; set; }
+
+        [Required]
+        [MaxLength(300)]
+        public string Brand { get; set; }
+
+        [Required]
+        [MaxLength(15)]
+        public string Price { get; set; }
+
+        [Required] 
+        public bool InStoke { get; set; }
+
+        [Required]
+        [MaxLength(1000)]
+        public string Description { get; set; }
+
+        [Required]
+        [MaxLength(15)]
+        public string Weight { get; set; }
+
+        [Required]
+        [MaxLength(15)]
+        public string Country { get; set; }
+
+        [Required] 
+        public int Score { get; set; }
+ 
+        public int CountOff { get; set; }
     }
 }
